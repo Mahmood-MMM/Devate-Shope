@@ -2,7 +2,7 @@ require("dotenv").config();
 const mongoose = require('mongoose')
 
 const connectDB = () => {
-  mongoose.connect("process.env.URI", {
+  mongoose.connect(process.env.URI, {
     useCreateIndex: true,
     useFindAndModify: false,
     useNewUrlParser: true,
