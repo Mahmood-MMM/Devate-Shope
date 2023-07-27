@@ -5,13 +5,13 @@ const authAdmin = require('../middleware/authAdmin')
 
 
 router.route('/products')
-    .get(auth, authAdmin, productCtrl.getProducts)
-    .post( auth, authAdmin, productCtrl.createProduct)
+    .get(productCtrl.getProducts)
+    .post(auth, authAdmin, productCtrl.createProduct)
 
 
 router.route('/products/:id')
-    .delete( auth, authAdmin, productCtrl.deleteProduct)
-    .put( auth, authAdmin, productCtrl.updateProduct)
+    .delete(auth, authAdmin, productCtrl.deleteProduct)
+    .put(auth, authAdmin, productCtrl.updateProduct)
 
 
 
